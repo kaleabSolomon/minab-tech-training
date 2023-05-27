@@ -1,12 +1,19 @@
 <script setup>
-const gmail = "Gmail";
+import { inject } from "vue";
+const isLogoVisible = inject("isLogoVisible");
+// console.log(isLogoVisible);
+
+const toggleLogoVisibility = () => {
+  isLogoVisible.value = !isLogoVisible.value;
+  console.log(isLogoVisible.value);
+};
 </script>
 
 <template>
   <div class="flex justify-end items-center w-screen gap-6 text-sm p-4 pr-6">
-    <button class="text-black font-sans hover:underline">{{ gmail }}</button>
+    <button class="text-black font-sans hover:underline">Gmail</button>
     <button class="text-black font-sans hover:underline">Images</button>
-    <button>
+    <button @click="toggleLogoVisibility">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="32"

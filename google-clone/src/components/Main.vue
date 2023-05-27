@@ -1,7 +1,15 @@
-<script setup></script>
+<script setup>
+import { inject } from "vue";
+const isLogoVisible = inject("isLogoVisible");
+</script>
 <template>
   <div class="w-full h-40 flex justify-center items-center">
-    <img class="w-1/4" src="../../public/google-logo.png" alt="google logo" />
+    <img
+      v-if="isLogoVisible"
+      class="w-1/4"
+      src="../../public/google-logo.png"
+      alt="google logo"
+    />
   </div>
   <div class="flex items-center justify-center">
     <form class="bg-white rounded-2xl px-4 w-1/2">
