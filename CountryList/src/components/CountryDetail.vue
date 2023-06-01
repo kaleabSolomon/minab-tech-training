@@ -2,27 +2,27 @@
 import { useQuery } from "@vue/apollo-composable";
 import gql from "graphql-tag";
 
-const { result } = useQuery(gql`
-  query getUsers {
-    countries(filter: { code: { eq: "ET" } }) {
-      code
-      name
-      emoji
-      capital
-      currency
-      phone
-    }
-  }
-`);
-console.log(result.value);
+// const { result } = useQuery(gql`
+//   query getUsers {
+//     countries(filter: { code: { eq: "ET" } }) {
+//       code
+//       name
+//       emoji
+//       capital
+//       currency
+//       phone
+//     }
+//   }
+// `);
+// console.log(result.value);
 </script>
 <template>
   <div class="w-screen h-full flex flex-col justify-center items-center">
     <h1>Ethiopia Flag</h1>
-    <!-- <p><span>Name:</span>{{ country.name }}</p>
-    <p><span>Capital:</span>{{ country.capital }}</p>
-    <p><span>Phone:</span>{{ country.phone }}</p>
-    <p><span>Currency:</span>{{ country.currency }}</p> -->
+    <p><span>Name:</span>Ethiopia</p>
+    <p><span>Capital:</span>Adiss Abeba</p>
+    <p><span>Phone:</span>+251</p>
+    <p><span>Currency:</span>Birr</p>
   </div>
 </template>
 <style scoped>

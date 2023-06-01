@@ -1,7 +1,13 @@
-<script setup></script>
+<script setup>
+import { RouterView, RouterLink } from "vue-router";
+</script>
 <template>
   <div class="w-full h-32 px-20 flex flex-col justify-center">
-    <div class="flex items-center gap-3 text-3xl">
+    <RouterLink
+      active-class="text-teal-300"
+      class="flex items-center gap-3 text-3xl text-gray-300"
+      to="/"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="52"
@@ -31,8 +37,8 @@
         />
       </svg>
       <h1>Countries</h1>
-    </div>
+    </RouterLink>
   </div>
-  <Body />
+  <RouterView />
 </template>
 <style scoped></style>
