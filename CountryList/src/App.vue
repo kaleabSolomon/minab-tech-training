@@ -1,10 +1,13 @@
 <script setup>
-import Body from "./components/Body.vue";
-import CountryDetail from "./components/CountryDetail.vue";
+import { RouterView, RouterLink } from "vue-router";
 </script>
 <template>
   <div class="w-full h-32 px-20 flex flex-col justify-center">
-    <div class="flex items-center gap-3 text-3xl">
+    <RouterLink
+      to="/"
+      active-class="text-teal-500"
+      class="flex items-center gap-3 text-3xl"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="52"
@@ -34,8 +37,8 @@ import CountryDetail from "./components/CountryDetail.vue";
         />
       </svg>
       <h1>Countries</h1>
-    </div>
+    </RouterLink>
   </div>
-  <CountryDetail />
+  <RouterView />
 </template>
 <style scoped></style>
