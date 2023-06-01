@@ -1,7 +1,4 @@
-<script setup>
-import Body from "./components/Body.vue";
-import CountryDetail from "./components/CountryDetail.vue";
-</script>
+<script setup></script>
 <template>
   <div class="w-full h-32 px-20 flex flex-col justify-center">
     <div class="flex items-center gap-3 text-3xl">
@@ -36,6 +33,6 @@ import CountryDetail from "./components/CountryDetail.vue";
       <h1>Countries</h1>
     </div>
   </div>
-  <CountryDetail />
+  <Body />
 </template>
 <style scoped></style>
