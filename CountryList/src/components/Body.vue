@@ -1,6 +1,4 @@
 <script setup>
-import { RouterLink } from "vue-router";
-
 import { useQuery } from "@vue/apollo-composable";
 import gql from "graphql-tag";
 
@@ -15,8 +13,7 @@ const { result } = useQuery(gql`
 </script>
 <template>
   <div class="px-20 py-10 flex flex-wrap gap-7">
-    <RouterLink
-      :to="`/country/${country.code}`"
+    <div
       v-for="country of result.countries"
       class="border-black border-4 w-40 h-32 rounded-2.5r flex flex-col justify-center items-center flex-wrap"
     >
@@ -26,7 +23,7 @@ const { result } = useQuery(gql`
         {{ country.emoji }}
       </p>
       <h2>{{ country.name }}</h2>
-    </RouterLink>
+    </div>
   </div>
 </template>
 <style scoped></style>

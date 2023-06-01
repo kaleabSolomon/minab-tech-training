@@ -2,7 +2,6 @@ import { createApp, provide, h } from "vue";
 import { DefaultApolloClient } from "@vue/apollo-composable";
 import App from "./App.vue";
 import "./style.css";
-import router from "./router";
 
 import {
   ApolloClient,
@@ -31,5 +30,4 @@ const app = createApp({
 
   render: () => h(App),
 });
-app.use(router);
 app.mount("#app");
