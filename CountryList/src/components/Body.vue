@@ -7,9 +7,8 @@ import gql from "graphql-tag";
 const { result } = useQuery(gql`
   query getUsers {
     countries {
-      code
-      name
       emoji
+      name
     }
   }
 `);
