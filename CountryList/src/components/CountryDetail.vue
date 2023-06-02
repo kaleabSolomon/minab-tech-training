@@ -1,20 +1,26 @@
 <script setup>
 import { useQuery } from "@vue/apollo-composable";
 import gql from "graphql-tag";
+import { useRoute } from "vue-router";
 
-// const { result } = useQuery(gql`
-//   query getUsers {
-//     countries(filter: { code: { eq: "ET" } }) {
-//       code
-//       name
-//       emoji
-//       capital
-//       currency
-//       phone
-//     }
-//   }
-// `);
-// console.log(result.value);
+const route = useRoute();
+
+const countryCode = route.params.id;
+console.log(typeof countryCode, countryCode);
+
+const { result } = useQuery(gql`
+  query getUsers {
+    countries(filter: { code: { eq: countryCode } }) {
+      code
+      name
+      emoji
+      capital
+      currency
+      phone
+    }
+  }
+`);
+console.log(result);
 </script>
 <template>
   <div class="w-screen h-full flex flex-col justify-center items-center">
